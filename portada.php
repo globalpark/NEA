@@ -41,10 +41,30 @@ window.addEvent('load', function() {
 });
 </script>
 	<div id="primary" class="portada">
-		<div id="links"><a href="/?page_id=8" class="bplink"><img src="<?php echo get_template_directory_uri(); ?>/images/banner_escuelas.jpg"></a><a href="?page_id=11" class="bplink"><img src="<?php echo get_template_directory_uri(); ?>/images/banner_programas.jpg"></a><a href="/?page_id=181" class="bplink"><img src="<?php echo get_template_directory_uri(); ?>/images/banner_fotos.jpg"></a></div>
-		<div id="twitter"><a class="twitter-timeline" data-dnt=true href="https://twitter.com/ninosenalegria" data-widget-id="266375195898548226" height="100%" width="450" lang="ES" data-link-color="red">Tweets de @Ninosenalegria</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+		<div id="links">
+			<a href="/escuelas" class="bplink">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/banner_escuelas.jpg">
+			</a>
+			<a href="/programas" class="bplink">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/banner_programas.jpg">
+			</a>
+			<a href="/galeria" class="bplink">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/banner_fotos.jpg">
+			</a>
+		</div>
+
+		<div id="twitter">
+			<a class="twitter-timeline" data-dnt=true href="https://twitter.com/ninosenalegria" data-widget-id="266375195898548226" height="100%" width="450" lang="ES" data-link-color="red">Tweets de @Ninosenalegria</a>
+			<script>
+				!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+			</script>
+		</div>
+
 		<?php echo $box; ?>
-		<div id="video"><iframe width="450" height="100%" src="http://www.youtube.com/embed/<?php echo $set[video_id][0];?>" frameborder="0" allowfullscreen></iframe></div>
+		
+		<div id="video">
+			<iframe width="450" height="100%" src="http://www.youtube.com/embed/<?php echo $set[video_id][0];?>" frameborder="0" allowfullscreen></iframe>
+		</div>
 	</div><!-- #primary -->
 <?php endwhile;
 get_footer(); ?>
