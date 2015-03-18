@@ -48,7 +48,8 @@ get_header(); ?>
 				$class = (count($children)!=0)? "":"escuelas";
 				echo '<div id="content" class="'.$class.'" role="main">';
 					if (count($children)!=0) {// If it has children show index
-						?><article id="post-<?php echo $post->ID; ?>" <?php echo post_class(); ?>>
+						?>
+						<article id="post-<?php echo $post->ID; ?>">
 						<? echo '<header class="entry-header">';
 						echo '<h1 class="entry-title">'.the_title().'</h1>';
 						echo '</header><!-- .entry-header -->';
@@ -61,7 +62,7 @@ get_header(); ?>
 					} else { // If it is bottom page show content
 						// FIRST THE SUBMENU ?>
 						<div id="escuelas_menu_sub">
-							<?php $children = wp_list_pages("title_li=&child_of=".$post->post_parent."&post_status=publish"); ?>
+							<?php //$children = wp_list_pages("title_li=&child_of=".$post->post_parent."&post_status=publish"); ?>
 						</div><!-- #escuelas_menu -->
 						<?// NOW HERE GOES THE GALLERY
 						$photos = aldenta_get_images('slider');
@@ -97,7 +98,7 @@ get_header(); ?>
 					<?php };
 				endwhile; // end of the loop. ?>
 			</div><!-- #content -->
-			<?php if ($principal){?>
+			<?php //if ($principal){?>
 			<div id="sidebar"><a class="twitter-timeline" data-dnt=true href="https://twitter.com/ninosenalegria" data-widget-id="266375195898548226" height="600" width="250" lang="ES" data-link-color="red">Tweets de @Ninosenalegria</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div><!-- #sidebar -->
 			<?}?>
 		</div><!-- #primary -->

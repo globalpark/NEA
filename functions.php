@@ -409,3 +409,21 @@ function social_func( $atts ){
 	return $html;
 }
 add_shortcode( 'social', 'social_func' );
+
+// Custom Post Types
+// Custom Post Type Proyecto
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+  register_post_type( 'testimonio',
+    array(
+      'taxonomies' => array('category'),
+      'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt'),
+      'labels' => array(
+        'name' => __( 'Testimonios' ),
+        'singular_name' => __( 'testimonio' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+}

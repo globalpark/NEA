@@ -2826,3 +2826,21 @@ div.content_ficha {
 #contacto .group.buttons.field button:hover {
 	background-color: #f1794e;
 }
+
+/* Additional Styles */
+
+#testimonios .testimonio{
+	width: 46%;
+	padding-right: 3%;
+	padding-top: 5px;
+	display: block;
+	float: left
+}
+
+#testimonios .testimonio iframe{
+	height: 200px !important;
+}
+
+#testimonios .testimonio p{
+	margin: 0px 0px 5px 0px;
+}
