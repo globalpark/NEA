@@ -19,7 +19,7 @@ if (has_post_thumbnail( $post->ID )){
 	$link_to = ($set[link_image][0]!="")? $set[link_image][0] : $image[0] ;
 	$box = '<div id="zoom"><a href="'.$link_to.'" class="external" ><img src="'.$thumb[0].'"/></a></div>';
 } else {
-	$box = '<div id="ayuda"><a href="/?page_id=19"><big>¡Ayúdanos!</big><br>Dona aquí</a></div>';
+	$box = '<div id="ayuda"><a href="/ayudanos"><big>¡Ayúdanos!</big><br>Dona aquí</a></div>';
 };
 
 ?>

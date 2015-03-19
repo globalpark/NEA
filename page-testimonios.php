@@ -19,15 +19,9 @@ Template Name: Testimonios
     
 
         <!-- WP Query Testimonios -->
-        <?php $args = array( 'post_type' => 'testimonio', 'posts_per_page' => 10 ); ?>
+        <?php $args = array( 'post_type' => 'testimonio', 'posts_per_page' => 20, 'order' => 'ASC' ); ?>
         <?php $the_query = new WP_Query($args); ?>
         <?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
-
-        <?php
-        $thumb_id = get_post_thumbnail_id();
-        $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'Marca', true);
-        $thumb_url = $thumb_url_array[0];
-        ?>
 
         <div id="testimonios">
             <div class="testimonio">

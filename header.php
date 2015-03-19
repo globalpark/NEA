@@ -72,7 +72,7 @@
 <div id="page" class="hfeed">
 	<div id="header">
 		<div id="hbanner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/fotos_head.jpg');">
-			<a href="/" id="hlogo"><img src="<?php echo get_template_directory_uri(); ?>/images/nea_logo.png" ></a><a href="/?page_id=19" id="hdona"><p><big>¡Ayúdanos!</big><br>Dona aquí</p></a>
+			<a href="/" id="hlogo"><img src="<?php echo get_template_directory_uri(); ?>/images/nea_logo.png" ></a><a href="/ayudanos" id="hdona"><p><big>¡Ayúdanos!</big><br>Dona aquí</p></a>
 		</div>
 		<div id="hmenu">
 <?php wp_nav_menu( array( 'theme_location'=>'primary', 'container'=>'', 'menu_id'=>'menu', 'menu_class'=>'top', ) ); ?>

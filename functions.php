@@ -426,4 +426,30 @@ function create_post_type() {
       'has_archive' => true,
     )
   );
+
+  register_post_type( 'patrocinador',
+    array(
+      'taxonomies' => array('category'),
+      'supports' => array( 'title', 'author', 'thumbnail'),
+      'labels' => array(
+        'name' => __( 'Patrocinadores' ),
+        'singular_name' => __( 'patrocinador' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+
+  register_post_type( 'patrocinador-slider',
+    array(
+      'taxonomies' => array('category'),
+      'supports' => array( 'title', 'author', 'thumbnail'),
+      'labels' => array(
+        'name' => __( 'Patrocinadores Slider' ),
+        'singular_name' => __( 'patrocinador-slider' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
 }
