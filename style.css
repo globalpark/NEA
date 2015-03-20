@@ -2566,7 +2566,8 @@ p.comment-form-comment {
 	color: #f6774e;
 }
 
-#sections .col1, #sections .sub3 {
+#sections .col1, #sections .sub3,
+#sections .col1, #sections .sub6 {
 	color: #f4bd68;
 }
 
@@ -2574,7 +2575,8 @@ p.comment-form-comment {
 	color: #ec2e7c;
 }
 
-#sections .col3, #sections .sub2 {
+#sections .col3, #sections .sub2,
+#sections .col3, #sections .sub5 {
 	color: #3eb8e0;
 }
 
@@ -2582,7 +2584,8 @@ p.comment-form-comment {
 	color: #fb8eba;
 }
 
-#sections .col5, #sections .sub1 {
+#sections .col5, #sections .sub1,
+#sections .col5, #sections .sub4 {
 	color: #aab02b;
 }
 
@@ -2878,4 +2881,124 @@ div.content_ficha {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+}
+
+.category-box{
+	padding-left: 10px;
+	color: #3eb8e0;
+}
+
+.category-box li{
+	list-style-type: none;
+}
+
+.category-box a{
+	color: #3eb8e0;
+}
+
+.category-box h1{
+	font-size: 20px;
+}
+
+.blog-post{
+	border-bottom: 3px dashed #c1dbed;
+	margin-bottom: 30px;
+	display: block;
+	float: left;
+}
+
+.border{
+	border-bottom: 3px dashed #c1dbed;
+}
+
+.blog-post h1,
+.blog-post .title{
+	color: #f6881f;
+	font-weight: 700;
+	font-size: 18px;
+}
+
+.blog-post .image{
+	width: 100%;
+	display: block;
+	float: left;
+}
+
+.blog-post .image img{
+	width: 100%;
+	padding-top: 20px;
+	padding-right: 5px;
+}
+
+.blog-post .content{
+	width: 100%;
+	display: block;
+	float: left;
+}
+
+.blog-post .content.full{
+	width: 100%;
+	display: block;
+	float: left;
+}
+
+.blog-post .content.full p,
+.blog-post .content.full h1{
+	float: left;
+}
+
+#escuelas .escuela h2{
+	color: #f6881f;
+	font-size: 18px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#escuelas .escuela a{
+	color: #f6881f;
+	font-size: 18px;
+}
+
+.galeria-nav ul{
+	margin-left: 5px;
+	display: inline-block;
+}
+
+.galeria-nav ul li{
+	display: inline-block;
+	padding: 10px 15px;
+}
+
+.galeria-nav ul li.active a{
+	background-color: transparent;
+	color: #79b2d1;
+}
+
+.galeria-nav ul li a{
+	color: #c1dbed;
+}
+
+.galeria-nav ul li a:hover{
+	background-color: transparent;
+	color: #79b2d1;
+}
+
+.galeria{
+	width: 45%;
+	padding-right: 2%;
+	display: block;
+	float: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.galeria img{
+	width: 100%;
+}
+
+.tab-content > .tab-pane {
+  display: none;
+}
+.tab-content > .active {
+  display: block;
 }

@@ -452,4 +452,108 @@ function create_post_type() {
       'has_archive' => true,
     )
   );
+
+  register_post_type( 'escuela',
+    array(
+      'taxonomies' => array('category'),
+      'supports' => array( 'title', 'editor', 'author', 'thumbnail'),
+      'labels' => array(
+        'name' => __( 'Escuelas' ),
+        'singular_name' => __( 'escuela' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+
+  register_post_type( 'galeria-2010',
+    array(
+      'taxonomies' => array('category'),
+      'supports' => array( 'title', 'editor', 'author', 'thumbnail'),
+      'labels' => array(
+        'name' => __( 'Galeria 2010' ),
+        'singular_name' => __( 'galeria-2010' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+
+  register_post_type( 'galeria-2010',
+    array(
+      'taxonomies' => array('category'),
+      'supports' => array( 'title', 'editor', 'author', 'thumbnail'),
+      'labels' => array(
+        'name' => __( 'Galeria 2010' ),
+        'singular_name' => __( 'galeria-2010' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+
+  register_post_type( 'galeria-2011',
+    array(
+      'taxonomies' => array('category'),
+      'supports' => array( 'title', 'editor', 'author', 'thumbnail'),
+      'labels' => array(
+        'name' => __( 'Galeria 2011' ),
+        'singular_name' => __( 'galeria-2011' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+
+  register_post_type( 'galeria-2012',
+    array(
+      'taxonomies' => array('category'),
+      'supports' => array( 'title', 'editor', 'author', 'thumbnail'),
+      'labels' => array(
+        'name' => __( 'Galeria 2012' ),
+        'singular_name' => __( 'galeria-2012' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+
+  register_post_type( 'galeria-2013',
+    array(
+      'taxonomies' => array('category'),
+      'supports' => array( 'title', 'editor', 'author', 'thumbnail'),
+      'labels' => array(
+        'name' => __( 'Galeria 2013' ),
+        'singular_name' => __( 'galeria-2013' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+
+  register_post_type( 'galeria-2014',
+    array(
+      'taxonomies' => array('category'),
+      'supports' => array( 'title', 'editor', 'author', 'thumbnail'),
+      'labels' => array(
+        'name' => __( 'Galeria 2014' ),
+        'singular_name' => __( 'galeria-2014' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+
+  register_post_type( 'galeria-2015',
+    array(
+      'taxonomies' => array('category'),
+      'supports' => array( 'title', 'editor', 'author', 'thumbnail'),
+      'labels' => array(
+        'name' => __( 'Galeria 2015' ),
+        'singular_name' => __( 'galeria-2015' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
 }

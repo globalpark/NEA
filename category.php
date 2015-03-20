@@ -15,7 +15,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h1 class="page-title"><?php
+					<h1 class="page-title border"><?php
 						printf( __( '%s', 'tema_nea' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 					?></h1>
 
@@ -31,13 +31,22 @@ get_header(); ?>
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php
-						/* Include the Post-Format-specific template for the content.
-						 * If you want to overload this in a child theme then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'content', get_post_format() );
-					?>
+					<div class="blog-post">
+						<?php if(has_post_thumbnail()) { ?>
+							<div class="image">
+								<?php the_post_thumbnail(); ?>
+							</div>
+							<div class="content">
+								<h1><a href="<?php the_permalink(); ?>" class="title"><?php the_title(); ?></a></h1>
+								<?php the_content(); ?>
+							</div>
+						<?php } else { ?>
+							<div class="content full">
+								<h1><a href="<?php the_permalink(); ?>" class="title"><?php the_title(); ?></a></h1>
+								<?php the_content(); ?>
+							</div>
+						<?php } ?>
+					</div>
 
 				<?php endwhile; ?>
 
@@ -63,8 +72,12 @@ get_header(); ?>
 
 <div id="sidebar">
 <?php if ( dynamic_sidebar('social_media') ) : else : endif; ?>
-<div id="twitterborder"><ul>
-<?php wp_tag_cloud('smallest=8&largest=22'); ?>
-</ul></div>
+<?php
+	$args = array('title_li' => __( '' ));
+?>
+<div id="twitterborder" class="category-box">
+	<h1>Categorías</h1>
+	<?php wp_list_categories($args); ?>
+</div>
 <div id="twitterborder"><a class="twitter-timeline" data-dnt=true href="https://twitter.com/ninosenalegria" data-widget-id="266375195898548226" height="600" width="250" lang="ES" data-link-color="red">Tweets de @Ninosenalegria</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div></div><!-- #sidebar -->
 <?php get_footer(); ?>
